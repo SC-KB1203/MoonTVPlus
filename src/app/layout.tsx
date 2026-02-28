@@ -19,8 +19,17 @@ import ChatFloatingWindow from '../components/watch-room/ChatFloatingWindow';
 import { WatchRoomProvider } from '../components/WatchRoomProvider';
 import { DownloadProvider } from '../contexts/DownloadContext';
 
+//const inter = Inter({ subsets: ['latin'] });
+// export const dynamic = 'force-dynamic';
 const inter = Inter({ subsets: ['latin'] });
+
+// --- 在这里添加下面这一行 ---
+export const runtime = 'edge'; 
+// --------------------------
+
 export const dynamic = 'force-dynamic';
+
+// 动态生成 metadata...
 
 // 动态生成 metadata，支持配置更新后的标题变化
 export async function generateMetadata(): Promise<Metadata> {
